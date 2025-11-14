@@ -5,50 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Sorarity</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a28 50%, #0a0a0a 100%);
             color: #ffffff;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .glow-1 {
+            top: -200px;
+            left: -200px;
+        }
+
+        .glow-2 {
+            bottom: -200px;
+            right: -200px;
+            animation-delay: 4s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 60px 40px;
             text-align: center;
         }
-        .container {
-            padding: 20px;
-            background-color: #2c2c2c;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        h1 {
-            font-size: 2.5em;
+
+        .logo {
+            font-size: 4em;
+            font-weight: 300;
+            letter-spacing: 0.15em;
             margin-bottom: 20px;
-            color: #00b4d8;
+            background: linear-gradient(135deg, #ffffff 0%, #b794f6 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 6s ease-in-out infinite;
+            background-size: 200% auto;
         }
-        p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
         }
-        a {
+
+        .tagline {
+            font-size: 1.3em;
+            font-weight: 300;
+            letter-spacing: 0.08em;
+            margin-bottom: 15px;
+            color: #d8b4fe;
+            opacity: 0.9;
+        }
+
+        .description {
+            font-size: 1.05em;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
             text-decoration: none;
-            background-color: #00b4d8;
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
             color: #ffffff;
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 0.05em;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(124, 58, 237, 0.3);
         }
-        a:hover {
-            background-color: #0096c7;
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(124, 58, 237, 0.5);
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #b794f6, transparent);
+            margin: 40px auto;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5em;
+            }
+            
+            .tagline {
+                font-size: 1.1em;
+            }
+            
+            .description {
+                font-size: 0.95em;
+            }
+            
+            .container {
+                padding: 40px 20px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+    
     <div class="container">
-        <h1>Welcome to The Sorarity</h1>
-        <p>Join our vibrant community of Sora creators!</p>
-        <a href="https://discord.gg/nEGcMcPF" target="_blank">Join Discord Server</a>
-    </body>
+        <h1 class="logo">THE SORARITY</h1>
+        <div class="divider"></div>
+        <p class="tagline">A Creator Community</p>
+        <p class="description">
+            Where digital innovation bridges with physical legacy, 
+            forging paths toward immortality through the art of creation.
+        </p>
+        <a href="https://discord.gg/nEGcMcPF" target="_blank" class="cta-button">
+            ENTER THE COMMUNITY
+        </a>
+    </div>
+</body>
 </html>
