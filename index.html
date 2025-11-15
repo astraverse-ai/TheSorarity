@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,208 +11,183 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-```
-    body {
-        font-family: 'Arial', sans-serif;
-        background: #36393f;
-        color: #0000FF;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        overflow-x: hidden;
-    }
-
-    .background-glow {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        border-radius: 50%;
-        filter: blur(80px);
-        animation: pulse 8s ease-in-out infinite;
-    }
-
-    .glow-1 {
-        top: -200px;
-        left: -200px;
-        background: radial-gradient(circle, rgba(250, 102, 255, 0.2) 0%, transparent 70%);
-    }
-
-    .glow-2 {
-        bottom: -200px;
-        right: -200px;
-        animation-delay: 4s;
-        background: radial-gradient(circle, rgba(139, 69, 255, 0.2) 0%, transparent 70%);
-    }
-
-    .glow-3 {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        animation-delay: 2s;
-        background: radial-gradient(circle, rgba(255, 51, 153, 0.15) 0%, transparent 70%);
-    }
-
-    @keyframes pulse {
-        0%, 100% { opacity: 0.4; transform: scale(1); }
-        50% { opacity: 0.7; transform: scale(1.15); }
-    }
-
-    .container {
-        position: relative;
-        z-index: 1;
-        max-width: 800px;
-        padding: 60px 40px;
-        text-align: center;
-    }
-
-    .logo {
-        font-size: 4em;
-        font-weight: 900;
-        letter-spacing: 0.08em;
-        margin-bottom: 20px;
-        background: linear-gradient(135deg, #0066FF 0%, #8B45FF 30%, #FF3399 60%, #FF6B35 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: shimmer 6s ease-in-out infinite;
-        background-size: 200% auto;
-        text-shadow: 0 0 40px rgba(0, 102, 255, 0.3);
-        text-transform: uppercase;
-    }
-
-    @keyframes shimmer {
-        0%, 100% { background-position: 0% center; }
-        50% { background-position: 100% center; }
-    }
-
-    .tagline {
-        font-size: 1.3em;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        margin-bottom: 15px;
-        background: linear-gradient(90deg, #0066FF 0%, #8B45FF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        opacity: 0.95;
-        text-transform: uppercase;
-    }
-
-    .description {
-        font-size: 1.1em;
-        line-height: 1.7;
-        margin-bottom: 50px;
-        color: rgba(255, 255, 255, 0.7);
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 400;
-    }
-
-    .cta-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        text-decoration: none;
-        background: linear-gradient(135deg, #0066FF 0%, #8B45FF 50%, #FF3399 100%);
-        color: #ffffff;
-        padding: 20px 60px;
-        border-radius: 8px;
-        font-size: 1.2em;
-        font-family: 'Arial', sans-serif;
-        font-weight: 900;
-        letter-spacing: 0.15em;
-        transition: all 0.4s ease;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 10px 40px rgba(0, 102, 255, 0.5);
-        text-transform: uppercase;
-    }
-
-    .discord-icon {
-        width: 28px;
-        height: 28px;
-        fill: currentColor;
-    }
-
-    .cta-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-        transition: left 0.5s;
-    }
-
-    .cta-button:hover::before {
-        left: 100%;
-    }
-
-    .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 50px rgba(0, 102, 255, 0.7);
-    }
-
-    .divider {
-        width: 80px;
-        height: 2px;
-        background: linear-gradient(90deg, #0066FF, #8B45FF, #FF3399);
-        margin: 40px auto;
-    }
-
-    @media (max-width: 768px) {
-        .logo {
-            font-size: 2.5em;
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #1a1b26; /* Deep cosmic navy */
+            color: #b9b9ff; /* Soft lavender for text */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
         }
-        
-        .tagline {
-            font-size: 1.1em;
+        .background-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: pulse 8s ease-in-out infinite;
         }
-        
-        .description {
-            font-size: 0.95em;
+        .glow-1 {
+            top: -200px;
+            left: -200px;
+            background: radial-gradient(circle, rgba(136, 77, 255, 0.3) 0%, transparent 70%); /* Cosmic purple glow */
         }
-        
+        .glow-2 {
+            bottom: -200px;
+            right: -200px;
+            animation-delay: 4s;
+            background: radial-gradient(circle, rgba(0, 153, 255, 0.3) 0%, transparent 70%); /* Starry blue glow */
+        }
+        .glow-3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 2s;
+            background: radial-gradient(circle, rgba(255, 77, 166, 0.2) 0%, transparent 70%); /* Nebula pink glow */
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.15); }
+        }
         .container {
-            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 60px 40px;
+            text-align: center;
         }
-
+        .logo {
+            font-size: 4em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #884dff 0%, #ff4d88 50%, #00ccff 100%); /* Cosmic gradient: purple, pink, cyan */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 6s ease-in-out infinite;
+            background-size: 200% auto;
+            text-shadow: 0 0 40px rgba(136, 77, 255, 0.4);
+            text-transform: uppercase;
+        }
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+        .tagline {
+            font-size: 1.3em;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #884dff, #00ccff); /* Purple to cyan gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.95;
+            text-transform: uppercase;
+        }
+        .description {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 50px;
+            color: rgba(185, 185, 255, 0.8); /* Light lavender with opacity */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
         .cta-button {
-            padding: 18px 40px;
-            font-size: 1em;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #884dff 0%, #ff4d88 50%, #00ccff 100%); /* Cosmic gradient */
+            color: #ffffff;
+            padding: 20px 60px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-family: 'Arial', sans-serif;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(136, 77, 255, 0.5);
+            text-transform: uppercase;
         }
-
         .discord-icon {
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
         }
-    }
-</style>
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(136, 77, 255, 0.7);
+        }
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, #884dff, #ff4d88, #00ccff); /* Cosmic gradient */
+            margin: 40px auto;
+        }
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5em;
+            }
+            .tagline {
+                font-size: 1.1em;
+            }
+            .description {
+                font-size: 0.95em;
+            }
+            .container {
+                padding: 40px 20px;
+            }
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 1em;
+            }
+            .discord-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="background-glow glow-1"></div>
     <div class="background-glow glow-2"></div>
     <div class="background-glow glow-3"></div>
-<div class="container">
-    <h1 class="logo">The Sorarity</h1>
-    <div class="divider"></div>
-    <p class="tagline">Content House</p>
-    <p class="description">
-        Where digital innovation bridges with physical legacy, 
-        forging paths toward immortality.
-    </p>
-    <a href="https://discord.gg/nEGcMcPF" target="_blank" class="cta-button" rel="noopener noreferrer">
-        <svg class="discord-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
-        </svg>
-        ENTER
-    </a>
-</div>
-
+    <div class="container">
+        <h1 class="logo">The Sorarity</h1>
+        <div class="divider"></div>
+        <p class="tagline">Content House</p>
+        <p class="description">
+            Where digital innovation bridges with physical legacy,
+            forging paths toward immortality.
+        </p>
+        <a href="https://discord.gg/nEGcMcPF" target="_blank" class="cta-button" rel="noopener noreferrer">
+            <svg class="discord-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            ENTER
+        </a>
+    </div>
 </body>
 </html>
